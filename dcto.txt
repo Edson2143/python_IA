@@ -1,2 +1,19 @@
 edson.8968@aluno.pr.senac.br
 eric2143
+
+quais são os dados de entrda necessários
+o que devo fazer com estes dados
+quais são
+
+escreva um programa que retorna o valor de hora de um funcionário com base no seu salario
+mensal e horas  trabalhadas por mês
+restrição
+
+output = valor hora
+input valor salario
+input qtde. hora trabalhadas
+
+
+git add .  para adicionar novos arquivo
+git add --nome do arquivo para levar arquivo especifico
+git commit - ponto de restauração   git commit -m "meu primeiro comite"
