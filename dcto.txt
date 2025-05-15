@@ -1,7 +1,7 @@
 edson.8968@aluno.pr.senac.br
 eric2143
 
-quais são os dados de entrda necessários
+quais são os dados de entrada necessários
 o que devo fazer com estes dados
 quais são
 
@@ -17,3 +17,12 @@ input qtde. hora trabalhadas
 git add .  para adicionar novos arquivo
 git add --nome do arquivo para levar arquivo especifico
 git commit - ponto de restauração   git commit -m "meu primeiro comite"
+senha 
+git push -u origin main
+&ricMoreira2143
+--para a
+git push origin main
+
+
+clone colocar o caminho do git hub
+git pull origin main
