@@ -13,8 +13,8 @@
 
 def printa_varias_vezes(texto,vezes):
     resultado = texto * vezes
-    return resultado
-
-print (printa_varias_vezes("jhon" * 5))
+#    return resultado
+    print (resultado("edson" * 3))
+    print (printa_varias_vezes("edson" * 3))
 
 

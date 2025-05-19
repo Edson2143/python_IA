@@ -11,17 +11,17 @@
 #escreva uma funçao chamada media que recebe tres argumentos inteiros. a funçao deve imprimir a média aritimetica dos tres argumentos.
 
 def media(x,y,z):
-    resultado =(x+y+z)/3
-print (media(20,20,30))
-
+    resultado =(10+10+10)/3
+    print (resultado)
+    
 
 def sete_irmaos():
     print("joao","pedro","antonio","gabriel","eric")
 
 sete_irmaos()
 
-nome = input("coloque nome  ")
-print(nome)
+#nome = input("coloque nome  ")
+#print(nome)
 
 
 def soma(x,y):
