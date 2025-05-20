@@ -36,5 +36,4 @@ def quadradoString(argumento):
 print (quadradoString("aybab","tuayb","Abtua","ybatt","uayba"))
 
 
-
-
+g
