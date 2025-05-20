@@ -70,7 +70,7 @@ def quadradoString():
         linha += 1  # Incrementa o contador de linhas
 # Chama a função para executá-la
 quadradoString()  # Isso inicia todo o processo
-"""
+
 def Repetir(palavra,numero):
     #defini funçao a palavra e numero de coluna
     stringTotal = (palavra * numero)
@@ -89,3 +89,50 @@ def Repetir(palavra,numero):
         linha += 1
 
 Repetir("Jumanji",5)
+"""
+#Funçoes: Atividades 6
+#escreva uma funçao chamada linha, que recebe dois argumentos: um inteiro e uma string.
+#A funçao imprime uma linha de texto, cujo comprimento e especificado pelo primerio argumento.
+#o caractere usado para desenhar a linha deve ser o primeiro caractere no segundo argumento.
+#Se o segundo argumento for uma string vazia, a linha dever consistir em asterisocos
+
+def Recebe(numero_int, texto):
+    #define o texto e numero colunas
+    #linha =0
+    if numero_int <= 0 or not texto:
+        print("*" * numero_int)
+        return
+    print(texto[0] * numero_int)
+
+Recebe(10,"eds")
+Recebe(5,"L")
+Recebe(2,"ii")
+
+
+def comprimentar(nome):
+    print(f"ola"{nome})
+def comprimentar_vezes(nome, vezes):
+    while vezes > 0:
+        comprimentar(nome)
+        vezes -= 1
+
+def resultado():
+    resultado = 25 + 25
+    return resultado
+def calculo(x):
+    soma = x + resultado()
+    print(soma)
+calculo(150)
+
+
+"""
+Explicação:
+Parâmetros:
+comprimento: Define o tamanho da linha.
+texto: A string cujo primeiro caractere será usado para desenhar a linha.
+Validação:
+Verifica se o comprimento é maior que 0 e se a string não está vazia.
+Impressão:
+Usa o operador de multiplicação para repetir o primeiro caractere da string pelo número especificado.
+Essa função é simples, eficiente e trata casos de entrada inválida de forma amigável. 
+"""
