@@ -54,8 +54,21 @@ lista_nova = [10,20,10,30,50,60,70]
 # de uma lista. o item que e adicionado deve ser sempre uma amais que o utilmoitem 
 # da lisa. o primeiro item a ser adicionadodeve ser 1
 
-lista_pratica =[10,11,12,13,14,15]
-opcao=input("informe 1 para remover ou 2 para adicionar")
-while True:
-    if opcao == 1:
-        lista_pratica  
+lista_pratica = [1,2,3,4,5,6]
+opcao=int(input("informe 1 para remover ou 2 para adicionar: "))
+#while True:
+if opcao == 1:
+    lista_del = lista_pratica.pop(1)
+    print(lista_del)
+    print(lista_pratica)
+else:
+    if opcao == 2:
+        lista_pratica.insert(1,20)
+        print(lista_pratica)
+    else:
+        print("opção errada")
+"""
+minha_lista = [1, 2, 3]
+    minha_lista.insert(1, 0)  # Insere 0 no índice 1
+    print(minha_lista)  # Saída: [1, 0, 2, 3]
+"""
