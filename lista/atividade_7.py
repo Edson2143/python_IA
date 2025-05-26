@@ -3,7 +3,72 @@
 #crie uma funcao que recebe uma lista de produtos e permite que o usuario digite um
 #nome. o programa deve informar se o produto esta ou nao na lista, e repetir ate o 
 #usuario digirar sair
-
+#atividade 7
+#verifcaçao de presenca em lista
+#crie uma funcao que recebe uma lista de produtos e permite que o usuario digite um
+#nome. o programa deve informar se o produto esta ou nao na lista, e repetir ate o
+#usuario digirar sair
+#def lista_produto(nome_produto):
+#    nome_produto = [nome_produtos]
+#   return(nome_produtos
+ 
+nome_l=["laranja","pera","ameixa","banana","pessego","limao"]
+lista_nova=[]
+lista_falsa=[]
+nome_p = input("Enetre com nome inicio ")
+controle = 0
+while nome_p in(nome_l):
+    print(f"{nome_p},Esta na lista")
+    lista_nova.append(nome_p)
+    nome_p = input("Enetre novo While ")
+    print(f"while =,{lista_nova}")
+else:
+    if nome_p == "sair":
+        print("fim do programa")
+    else:
+        lista_falsa.append(nome_p)  
+        nome_p = input("Enetre com nome 0 ")
+        print(lista_falsa)
+        if nome_p in(nome_l):
+            print(f"{nome_p},Esta na lista")
+            lista_nova.append(nome_p)
+            nome_p = input("Enetre novo 1 ")
+        else:
+            if nome_p == "sair":
+                print("fim do programa")
+                print(lista_nova)
+            else:
+                if nome_p in(nome_l):
+                    print(f"{nome_p},Esta na lista")
+                    lista_nova.append(nome_p)
+                    nome_p = input("Enetre novo 2 ")
+                    print(lista_nova)
+                    if nome_p == "sair":
+                        print("fim do programa")
+                    else:
+                        nome_p = input("Enetre novo 3 ")
+                        if nome_p == "sair":
+                            print("fim do programa")
+                        else:
+                            if nome_p in(nome_l):
+                                print(f"{nome_p},Esta na lista")
+                                lista_nova.append(nome_p)
+                                nome_p = input("Enetre novo 4 ")
+                                print(lista_nova)
+                            else:
+                                if nome_p == "sair":
+                                    print("fim do programa")
+                                else:
+                                    lista_falsa.append(nome_p)
+                                    nome_p = input("Enetre novo 6 ")
+                                    if nome_p in(nome_l):
+                                        print(f"{nome_p},Esta na lista")
+                                    lista_nova.append(nome_p)
+                                    nome_p = input("Enetre novo 5 ")
+                                    print(lista_nova)
+                                    if nome_p == "sair":
+                                        print("fim do programa")
+ 
 def lista_produto():
     nome_produto = []
     while nome_produto = "sair":
