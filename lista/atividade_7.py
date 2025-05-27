@@ -11,7 +11,7 @@
 #def lista_produto(nome_produto):
 #    nome_produto = [nome_produtos]
 #   return(nome_produtos
- 
+
 nome_l=["laranja","pera","ameixa","banana","pessego","limao"]
 lista_nova=[]
 lista_falsa=[]
@@ -68,14 +68,18 @@ else:
                                     print(lista_nova)
                                     if nome_p == "sair":
                                         print("fim do programa")
- 
+
+nome_l=["laranja","pera","ameixa","banana","pessego","limao"]
+def verificar_presenca(nome_l):
+
+"""
 def lista_produto():
     nome_produto = []
     while nome_produto = "sair":
         colocar = str(input("Digite produto: = "))
         nome_produto.append(colocar)
         print(nome_produto)
-"""
+
 #atividade 6
 #Eliminar duplicados
 #peça ao usuario para digitar 10 numero(com possibilidades de repetição). 
