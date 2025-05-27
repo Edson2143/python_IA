@@ -1,3 +1,44 @@
+#atividade 5
+#escreva uma funçao chamada lista_soma que recebe duas listas de inteiros 
+#como argumentos. a Funçao reorna uma nova lista que contem as somas dos 
+#itens em cada indice nas duas listas originais. voce pode assumir que ambas
+#as listas taem o mesmo numero de itens
+
+lista_original0=[1,2,3,5,6,7,8,9,90]
+lista_original1=[3,7,9,11,13,15,17,19]
+resultado = lista_soma(çosta_)
+def lista_soma(listas):
+
+
+# Exemplo de uso:
+lista1 = [1, 2, 3]
+lista2 = [4, 5, 6]
+resultado = lista_soma(lista1, lista2)
+print(resultado)  # Saída: [5, 7, 9]
+#atividade 4
+#escreva uma funçao chamada numeros_pares, que recebe uma lista de inteiros
+# omo argumento. A funcao retorna uma nova lista contendo os numeros pares 
+# da lista original.
+#def numeros_pares(lista):
+    #% 2 == 0 para testar se o numero é inteiro
+#   return [numero for numero in lista if numero % 2 == 0]
+
+# Exemplo de uso:
+#lista_original = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#lista_pares = numeros_pares(lista_original)
+#print(lista_pares)  # Saída: [2, 4, 6, 8, 10]
+#do professor
+l = [0,5,3,6,8,7,94,6,5,10,12,20]
+def numeros_pares(lista):
+    pares = []
+    for numero in lista:
+        if numero % 2 == 0:
+            pares.append(numero)
+    return pares
+print(numeros_pares(1))
+    
+
+"""
 #atividade 3
 #escreva uma funcao chamada Soma_Positivos, que recebe uma lista de inteiros 
 #como argumento. A função retorna a soma dos valores positivos na lista.
@@ -11,7 +52,7 @@ numeros = [-5, 3, -1, 7, 2, -2, 8]
 resultado = soma_positivos(numeros)
 print(f"A soma dos números positivos é: {resultado}")
 
-"""
+
 #atividades 2
 #Escrevauma funçao chamada anagramas, que recebe duas strings como argumentos.
 #a funçao retorna True se as string são anagrams uma das outra. Duas palavras 

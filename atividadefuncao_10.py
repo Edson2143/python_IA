@@ -1,13 +1,48 @@
 #atividadefuncao10
 #Por favor escreva uma funçao chamada mesmo_caracter, que recebe uma string e dois 
 # inteiros como agumentos. os inteiros se referem a indicies dentro da string a funçao
-#  DEVE RETORNA TRUE SE OS DOIS CARACTERS NOS INDICES ESPECIFICADOS FORESM OS MESMOS. 
-# CASO CONTRARIO E ESPECIALMENTE SE QUALQUER UM DOSI INDICES ESTIVER FORA DO ESCOPO 
-#  .DASTRING,AFUNÇAORETONA False
+#  DEVE RETORNA TRUE SE OS DOIS CARACTERS NOS INDICES ESPECIFICADOS FOREM OS MESMOS. 
+# CASO CONTRARIO E ESPECIALMENTE SE QUALQUER UM DOS INDICES ESTIVER FORA DO ESCOPO 
+#  .DA STRING,A FUNÇAO RETONA False
 
-#Por favor, escreva ua funçaochamadao maior_numero, que recebe tres argumentos. 
-#a funçao retorna o maior valor dos três
+def mesmo_caracter(string, indice1,indice2):
+#testar se indice esta na faixa intervalo
+    if 0 <= indice1 < len(string) and 0 <= indice2 < len(string):
+        return string[indice1] == string[indice2]
+    else:
+        print("o indices não conferem")
+print(mesmo_caracter("abacaxi", 0, 5))  # False (caracteres: 'a' e 'x')
+print(mesmo_caracter("abacaxi", 0, 2))  # True (caracteres: 'a' e 'a')
+print(mesmo_caracter("abacaxi", -1, 2)) # False (índice -1 está fora do escopo)
+print(mesmo_caracter("zbacaxiqopz", 0, 10)) # False (índice 10 está fora do escopo)
 
+print (mesmo_caracter("EdsonMoreira",1,5))
+def mesmo_caracter(string, indice1, indice2):
+    # Verifica se os índices estão dentro do escopo da string
+    if indice1 < 0 or indice2 < 0 or indice1 >= len(string) or indice2 >= len(string):
+        return False
+    # Retorna True se os caracteres nos índices forem iguais, caso contrário, False
+    return string[indice1] == string[indice2]
+
+
+print(mesmo_caracter("abacaxi", 0, 4))  # False (caracteres: 'a' e 'x')
+print(mesmo_caracter("abacaxi", 0, 2))  # True (caracteres: 'a' e 'a')
+print(mesmo_caracter("abacaxi", -1, 2)) # False (índice -1 está fora do escopo)
+print(mesmo_caracter("zbacaxiqopz", 0, 10)) # False (índice 10 está fora do escopo)
+
+"""
+def mesmo_caracter(string, indice1,indice2):
+#testar se indice esta na faixa intervalo
+    if 0 <= indice1 < len(string) and 0 <= indice2 < len(string):
+        return string[indice1] == string[indice2]
+    else:
+        print("o indices não conferem")
+
+print (mesmo_caracter("EdsonMoreira",1,5))
+
+
+
+Essa função é simples, eficiente e cobre os casos mencionados. 😊
 
 def o_maior_numero(x,y,z):
     maior = x
@@ -22,11 +57,6 @@ def o_maior_numero2(x,y,z):
 print(o_maior_numero(10,20,30))
 print(o_maior_numero2(50,14,90))    
 
-
-
-
-
-"""
 def linha(n,texto):
     if texto =="":
         caractere = '*'

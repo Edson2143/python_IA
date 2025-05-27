@@ -11,7 +11,7 @@ lista_compra=["pão","arros","picanha","alcatra","bacalhau"]
 #def lista_compras():
 listas=[]
 lista=input("Digite item para lista = ")
-lista.append(lista_compra)
+listas.append(lista_compra)
 while True:
     if lista==("remover"):
         remo_item=input("Informe item para remover = ")

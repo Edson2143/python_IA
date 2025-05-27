@@ -70,6 +70,7 @@ else:
     else:
         print("opção errada")
 
+<<<<<<< HEAD
 lista=[]
 print(lista)
 while True:
@@ -130,3 +131,23 @@ print(f"A mediana é {mediana(lista_mediana)}")
 #o comprimeto da lista
 def tamanholista_tamanho[12,10,11,13,40]
 print len(lista_tamanho)
+=======
+lista_pratica = [1,2,3,4,5,6]
+opcao=int(input("informe 1 para remover ou 2 para adicionar: "))
+#while True:
+if opcao == 1:
+    lista_del = lista_pratica.pop(1)
+    print(lista_del)
+    print(lista_pratica)
+else:
+    if opcao == 2:
+        lista_pratica.insert(1,20)
+        print(lista_pratica)
+    else:
+        print("opção errada")
+"""
+minha_lista = [1, 2, 3]
+    minha_lista.insert(1, 0)  # Insere 0 no índice 1
+    print(minha_lista)  # Saída: [1, 0, 2, 3]
+"""
+>>>>>>> acd9a0e43f6d8e85e6af8a3698b6a6c41c23e409
