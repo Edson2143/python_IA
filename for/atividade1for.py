@@ -6,10 +6,7 @@
 
 lista_original0=[1,2,3,5,6,7,8,9,90]
 lista_original1=[3,7,9,11,13,15,17,19]
-resultado = lista_soma(lista_original0,lista_original1)
-print(resultado)
-
-"""
+resultado = lista_soma(çosta_)
 def lista_soma(listas):
 
 
@@ -41,7 +38,7 @@ def numeros_pares(lista):
 print(numeros_pares(1))
     
 
-
+"""
 #atividade 3
 #escreva uma funcao chamada Soma_Positivos, que recebe uma lista de inteiros 
 #como argumento. A função retorna a soma dos valores positivos na lista.
@@ -138,4 +135,11 @@ for nome in lista:
         print(nome)
     else:
         print(f"O{nome}, tem nmesmo caracteres 3")
-"""
+"""#atividades 2
+#Escrevauma funçao chamada anagramas, que recebe duas strings como argumentos.
+#a funçao retorna True se as string são anagrams uma das outra. Duas palavras 
+#são anagrams se elas contem exateamente os mensos caracteres. Dica:
+#a funçao sorted tambem pode ser usada em strings.
+
+def  anagrama(anagramas1, anagramas2):
+    return so
