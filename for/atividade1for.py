@@ -6,7 +6,10 @@
 
 lista_original0=[1,2,3,5,6,7,8,9,90]
 lista_original1=[3,7,9,11,13,15,17,19]
-resultado = lista_soma(çosta_)
+resultado = lista_soma(lista_original0,lista_original1)
+print(resultado)
+
+"""
 def lista_soma(listas):
 
 
@@ -38,7 +41,7 @@ def numeros_pares(lista):
 print(numeros_pares(1))
     
 
-"""
+
 #atividade 3
 #escreva uma funcao chamada Soma_Positivos, que recebe uma lista de inteiros 
 #como argumento. A função retorna a soma dos valores positivos na lista.
