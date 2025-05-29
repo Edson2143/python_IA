@@ -10,7 +10,7 @@ print(minha_lista.count(6))
 minha_palavra = "oi,oi,oi, amigos, Ola"
 nova_palavra = minha_palavra.replace("Oi","" "Olá")
 print(nova_palavra)
-"""
+
 lista_bidimencional = [
     [0,1,2,3],
     [0,8,6,9],
@@ -31,6 +31,7 @@ listaBi=[
     [20,23,25,26,24,25],
     [40,41,42,43,44,50]
 ]
+
 def conta_elementos_match(minha_matriz, elemento):
     contagem = 0
     for linha in minha_matriz:
@@ -38,4 +39,26 @@ def conta_elementos_match(minha_matriz, elemento):
             if item==elemento:
                 contagem+=1
     return contagem
-print(conta_elementos_match(listaBI),4)
+
+print(conta_elementos_match(listaBi),[4])
+"""
+#escreva um algoritimo que imprime na ela o tabuleiro de sudoku baseado na lista enviada no teams
+sudoku=[[9, 0, 0, 0, 8, 0, 3, 0, 0],
+  [0, 0, 0, 2, 5, 0, 7, 0, 0],
+  [0, 2, 0, 3, 0, 0, 0, 0, 4],
+  [0, 9, 4, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 7, 3, 0, 5, 6, 0],
+  [7, 0, 5, 0, 6, 0, 4, 0, 0],
+  [0, 0, 7, 8, 0, 3, 9, 0, 0],
+  [0, 0, 1, 0, 0, 0, 0, 0, 3],
+  [3, 0, 0, 0, 0, 0, 0, 0, 2]]
+
+#def conta_elementos_sudoku(minha_sud,elemento):
+for linha in sudoku:
+    for item in linha:
+        if item==0:
+            print("_",end="")
+        else:
+            print(item,"",end="")
+
+    print("")
