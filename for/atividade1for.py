@@ -36,7 +36,7 @@ def numeros_pares(lista):
             pares.append(numero)
     return pares
 print(numeros_pares(1))
-    
+lista_vazia = []
 
 """
 #atividade 3

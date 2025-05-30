@@ -63,5 +63,20 @@ def histogram(minha_string):
         if letra not in [histograma]:
             histograma[letra] = "i"
         histograma[letra] +=1
-    return histogram
+    return histograma
+
 print(histogram(string))
+
+#lista
+histogram("abbacccc")
+def histogram(texto: str):
+    contagem ={}
+    for letra in texto:
+        if letra in contagem:
+            contagem[letra] += 1
+        else:
+            contagem[letra] = 1
+    for letra in contagem:
+        print(letra + ": "+"+" * contagem {letra})
+
+histogram("abbacccc")
