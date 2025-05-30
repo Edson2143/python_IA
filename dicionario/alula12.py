@@ -1,3 +1,5 @@
+
+"""
 ##dicionarios
 #usado para armazenar dados no formato: chave:valor
 #são ordenados
@@ -46,12 +48,13 @@ def contagens(minha_lista):
         palavras[palavra] += 1
     return palavras
 print(contagens(lista_palavras))
-
+"""
 #Pratica Dicionario:
 #escreva uma funçao chamada histogram que recebe uma string como argumento.
 #A funçao deve imprimir um histograma representando o numero de vezes que 
 #cada letra ocorre na string. Cada ocorrencia de uma letra deve ser 
-#representada por um asterisco na linha especificapara aquela letra.
+#representada por um asterisco na linha especifica para aquela letra.
+#Por exemplo, a chamada ade funçao historgram("abba") deve imprimir
 
 string=["usado para armazenar dados no formato chave:valor"]
 def histogram(minha_string):
