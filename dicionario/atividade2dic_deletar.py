@@ -1,3 +1,39 @@
+#lista telefonica - ativ 2
+def lista_telefonica():
+    agenda = {}
+ 
+    while True:
+        comando = input("Comando (1 busca, 2 adiciona, 3 sai): ")
+        if comando == "1":
+            nome = input("nome_1: ")
+            if nome in agenda:
+                print("números_1:")
+                indice = 0
+                while indice < len(agenda[nome]):
+                    print(agenda[nome][indice])
+                    indice += 1
+            else:
+                print("nenhum número")
+ 
+        elif comando == "2":
+            nome = input("nome_2: ")
+            numero = input("número: ")
+            if nome in agenda:
+                agenda[nome].append(numero)
+            else:
+                agenda[nome] = [numero]
+            print("ok!")
+ 
+        elif comando == "3":
+            print("saindo...")
+            print(agenda)
+            break
+ 
+        else:
+            print("Comando inválido. Tente novamente.")
+ 
+lista_telefonica()
+"""
 #deleta chaves
 staff = {"alan":"professor","emily":"aluna","Davi":"professor"}
 #print(staff)
@@ -29,3 +65,4 @@ altura_combinada = 0
 for pessoaa in pessoas:
     altura_combinada += pessoa["altura"]
 print (altura_combinada)
+"""
