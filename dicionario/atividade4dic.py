@@ -7,6 +7,7 @@
 # ano
 # tempo de execução
 # Os valores anexados a essas chaves são fornecidos como argumentos para a função
+banco_de_dados = []
 def add_filme(database,nome,diretor,ano,duracao):
     filme = {
     "nome": nome,
@@ -15,13 +16,14 @@ def add_filme(database,nome,diretor,ano,duracao):
     "duração ": duracao
     }
     database.append(filme)
+    print(banco_de_dados)
 
-
-banco_de_dados = []
-add_filme(banco_de_dados, "Inception", "Christopher Nolan", 2000, 150)
-add_filme(banco_de_dados, "Parasite", "Bong Joon-ho", 2019, 132)
-
-print(banco_de_dados)
+while True:
+    nome = input("Nome: ")
+    diretor = input("Diretor: ")
+    ano = int(input("ano: "))
+    duracao = int(input("Duração: "))
+    add_filme(banco_de_dados, nome, diretor, ano,duracao)    
 
 
 

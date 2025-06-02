@@ -11,6 +11,3 @@ print(dict_invertido)
 # Saída: {1: 'a', 2: 'b', 3: 'c'}
 
 
- Lista: Fatiamento (Slicing):
-Permite extrair uma sub-lista (uma fatia) especificando [start:stop:step]. Semelhante ao range(), start é inclusivo, stop é 
-exclusivo. step é opcional.
