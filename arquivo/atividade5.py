@@ -5,19 +5,32 @@
 #idade seja maior ou igual a 18
 
 try:
-    with open("dados.csv","r", encoding="utf=8") as infile:
-        reader = csv.reader(infile)
-        with open('dados_maiores.csv', 'w', encoding='utf-8', newline='') as outfile:
-            writer = csv.writer(outfile)
-        for linha in infile:
-            conteudo = arquivo.read()
-            linha=linha.replace("\n","")
-            
-        print(conteudo)
+# Abrindo o arquivo de entrada
+    with open('dados.csv', 'r', encoding='utf-8') as arquivo_entrada:
+    #reader = csv.reader(infile)
+    # Criando o arquivo de saída
+        with open('dados_maiores.csv', 'w', encoding='utf-8', newline='') as arquivo_saida:
+            #writer = csv.writer(outfile)
+        # Processando cada linha
+            for linha in arquivo_entrada:
+                linha = linha.replace("\n","")
+                if linha:  # Garantir que há nome e idade
+                    #print(linha)
+                    partes = linha.split(",")
+                    nome = partes[0]
+                    idade = partes[1]
+                    if len(idade) <=3:
+                        #if type(idade) == int:
+                        if int(idade) >= 18:
+                           arquivo_saida.write(linha +"\n")
+    print('Arquivo "dados_maiores.csv" criado com sucesso!')
+    
 except FileNotFoundError:
     print("arquivo não existe")
-#fazer
+except ValueError:
+    print("Erro: verifique se o arquivo esta no formato 'nome,idade'.")
 
+"""
 import csv
 
 # Abrindo o arquivo de entrada
@@ -29,7 +42,7 @@ with open('dados.txt', 'r', encoding='utf-8') as infile:
         writer = csv.writer(outfile)
         
         # Processando cada linha
-        for linha-row in reader:
+        for row in reader:
             if len(row) == 2:  # Garantir que há nome e idade
                 nome, idade = row[0], row[1]
                 
@@ -43,8 +56,6 @@ print('Arquivo "dados_maiores.csv" criado com sucesso!')
 
 
 
-
-"""
 try:
     with open("texto.txt",'r', encoding='utf-8') as arquivo:
         total=0
