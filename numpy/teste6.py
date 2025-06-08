@@ -26,6 +26,6 @@ print(f"O dtype da arr1d é: {arr1d.dtype}")
 print(f"o edessa Itemsize arr1d é: {arr1d.itemsize}")
 print(f"O dtype da Itemsize arr3d é: {arr3d.itemsize}")
 print(f"O dtype da Itemsize array_float é: {array_float.itemsize}")
-#
+
 
       
