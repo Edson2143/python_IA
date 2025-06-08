@@ -6,7 +6,7 @@
 #titulo inclui a palavra pesquisada . A capitalização e irrelevante aqui.
 #Uma pesquisa por ana deve retorna uma lista contendo ambos:
 #Anaconda e anatomia da greyce.
-"""
+
 def encontra_filmes(database,lista,buscatermo):
     nova_lista={}
     while True:
@@ -27,4 +27,4 @@ banco_de_dados = []
 add_filme(banco_de_dados, "home sem cabeça", "Christopher Nolan", 2000, 150)
 add_filme(banco_de_dados, "Buraco profundo", "Bong Joon-ho", 2011, 132)
 print(banco_de_dados)
-"""
+
