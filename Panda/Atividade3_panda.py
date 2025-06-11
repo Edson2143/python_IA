@@ -1,28 +1,44 @@
 
 import pandas as pd
-#atividade 2 selecionando e filtrando filmes
-#1.selecione apenas as colunas 'Title','Director", e "Year" do df_filmes. 
-#  Mostre as primeiras 5 linhas.
-#2.usando .iloc, selecione os filmes nas posições(linhas)10 a 15 e as colunas
-#  nas posições 0a3
-#3.definaa coluna 'Rank' como o indice do df_filmes Em seguida,use  .iloc 
-#   para selecionar os filmes com Rank de 1 a 2 e mostrar apenas as colunas 
-#  'Title' e 'Revenue(Millions)' Lembre-se de resetar o incidde depois ou 
-#  usar uma copia do DataFrame para não alterar o original para as proximas 
-#  atividade; df_temp = df_filmaes.set_index('Rank'))
-#4.Filtre o df_filmes para mostrar apenas os filmes lançados(coluna 'Year')
-#  a partir de 2016. Mostre 'Title' e 'Year'.
+#atividade
+#1 crie uma nova coluna chamada 'Rating_Metascore_Diff'que seja a diferença absoluta 
+#entre 'Rating e (Matascore')/ 10),(Divida Metascore por 10 para coloca-lo numa escala 
+#similar ao Rating).
+#2 Mostre as  colunas 'Title','Rating','Metascore', e a nova 'Rating_Metascore_Diff 
+# para os primeiros 5 filmes.
+#3 Remova a coluna 'Description' do df_filmes Crie um novo DataFrame para isso, não 
+# altere o original.
+#4 Renomeie a coluna 'Votes' para 'Numero_Votos'. Faça isso no DataFrame original 
+# usando inplace=True. Verifique se a coluna foi renomeada.
 
+#O argumento inplace=True e usado em metodos do pandas(como.drop(),.sort_values(),.etc. 
+#para indicar que a alteração deve ser feita diretamente no DataFrame original, 
+#sem precisar reatribuir o resultado a uma variavael
+#Base de dados
+#pd. ler 
 url_filmes = "IMDB-Movie-Data.csv"
 df_filmes = pd.read_csv(url_filmes)
-#print(f"dados caregado : {url_filmes}")
-#print(f"dados caregado : {df_filmes}")
-#print("primeiroas 7 linhas do datFrame filmes head: ")
-#print(df_filmes.head(7))
-#print(df_filmes)
-#selecionando linhas e e colunas especificar
+#1 crie uma nova coluna chamada 'Rating_Metascore_Diff'que seja a diferença absoluta 
+#entre 'Rating e (Matascore')/ 10),(Divida Metascore por 10 para coloca-lo numa escala 
+df_filmes['Rating_Metascore_Diff'] = df_filmes['IMDB_Rating']-(df_filmes['Meta_score'] / 10)
+print("\n o dataframe agora tem uma nova coluna:")
+print(df_filmes.head())
 
+#2 Mostre as  colunas 'Title','Rating','Metascore', e a nova 'Rating_Metascore_Diff 
+# para os primeiros 5 filmes.
+df_filmes_sem_overview = df_filmes.drop(columns=['Overview'])
+print("\nColuns apos remoçao da descrição:")
+print(df_filmes_sem_overview.columns.tolist())
 
+#3 Remova a coluna 'Description' do df_filmes Crie um novo DataFrame para isso, não 
+# altere o original.
+df_filmes.rename(columns={'No_of_votes': 'Numero_Votos'}, inplace=True)
+#4 Renomeie a coluna 'Votes' para 'Numero_Votos'. Faça isso no DataFrame original 
+# usando inplace=True. Verifique se a coluna foi renomeada.
+print("\nVerificarçao das colunas apos raenomear 'No_of_votos':")
+print(df_filmes.columns.tolist())
+
+"""
 selecao_especifica = df_filmes.iloc[[0,3],[1,2,9,3]]
 print("primeiroas 5 linhas do datFrame filmes head: ")
 print(selecao_especifica)
@@ -58,10 +74,9 @@ df_filmes['Gross']=pd.to_numeric(df_filmes['Gross'],errors='coerce')
 print(type(df_filmes['Released_Year']))
 
 #Agora convertido o numero Gross em numero , e mais seguro fazer a comparação
-"""df_filmes['Alta_receita'] = df_filmes['Gross']>1000
+df_filmes['Alta_receita'] = df_filmes['Gross']>1000
 print("\n Dataframe com nova coluna 'Alta Receita (primieiras linhas) ")
 print(df_filmes.head())
-"""
 #Drop
 #metodo drop remove uma linha (registro)ou coluna
 df_filmes = df_filmes.drop('Poster_Link',axis=1)
@@ -70,28 +85,7 @@ print(df_filmes.head())
 df_filmes = df_filmes.drop(4,axis=0)
 print(df_filmes.head())
 
-#lidando com dados ausentes
-#verificar dados ausents com  .isna() .sem():
-print('\n Contagem de valores ausentes por coluna:')
-print(df_filmes.isna().sum())
-
-#Removendo linhas/colunas
-#Criando uma copia para não
-df_sem_nan_linhas= df_filmes.copy()
-#Removnedo todaas linhas que contenham qualquer valor nan
-#inplace : altera arquivo original
-df_sem_nan_linhas.dropna(inplace=True)
-print(f"\n numero de linahs origianl: {len(df_filmes)}")
-print(f"\n numero de linhas opos drog: {len(df_sem_nan_linhas)}")
-
-#removendo colunas que tenham qualquer valor Nan
-df_sem_nan_colunas = df_filmes.dropna(axis=1) #axis 1 deleta colunas axis 0 deleta linhas
-print(f"Colunas originais: {df_filmes.columns.tolist()}")
-print(f"Colunas apos dropna: {df_sem_nan_colunas.columns.tolist()}")
-
-
-
-"""
+#10-06
 url_filmes = "IMDB-Movie-Data.csv"
 df_filmes = pd.read_csv(url_filmes)
 titulos_filmes = df_filmes['Series_Title']
