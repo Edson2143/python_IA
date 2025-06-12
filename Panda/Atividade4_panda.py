@@ -16,8 +16,29 @@ df_filmes = pd.read_csv(url_filmes)
 #print('\n Contagem de valores ausentes por coluna:')
 
 # Verificando valores ausentes nas colunas especificadas
-df_filmes[['Revenue(Millions)', 'Metascore']].isnull().sum()
-print(df_filmes.isna().sum())
+#df_filmes[['Revenue(Millions)', 'Metascore']].isnull().sum()
+#print(df_filmes.isna().sum())
+print("Valores ausentes por coluna:")
+print(df_filmes[['Gross','Meta_score']].isna().sum())
+
+df_filmes_completo =df_filmes.dropna()
+print(f"\nNumeros de linahs DataFrame origianl:{len(df_filmes)}")
+print(f"Numero de linhas apos remover todas com NaN:{len(df_filmes_completo)}")
+#Garantiddo as colunas estão numericas
+df_filmes['Gross']=pd.to_numeric(df_filmes['Gross'],errors='coerce')
+df_filmes['Meta_score']=pd.to_numeric(df_filmes['Meta_score'],errors='coerce')
+#criandouma copia do DataFrame original
+df_filmes_preechido_media= df_filmes.copy()
+
+#preenchend NaNs
+df_filmes_preechido_media['Gross']=df_filmes_preechido_media['Gross'].fillna
+(df_filmes_preechido_media['Gross'].mean())
+df_filmes_preechido_media['Meta_score']=df_filmes_preechido_media
+['Meta_score'].fillna(df_filmes_preechido_media['Meta_score'].median())
+#verifacndo se ainda existem NaNis nessas colunas
+print("\nValores ausentes apos preenchimentos:")
+print(df_filmes_preechido_media[['Gross','Meta_score']].isna())
+
 
 """
 #verificar dados ausents com  .isna() .sem():

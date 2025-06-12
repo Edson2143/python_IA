@@ -4,6 +4,38 @@ import pandas as pd
 url_filmes = "IMDB-Movie-Data.csv"
 df_filmes = pd.read_csv(url_filmes)
 
+#salvando em um arquivo CSV sem o indice
+df_filmes.to_csv("meus_filmes_bem_avaliados.csv")
+index=(False)
+print("\nDataframe salvo em 'Meus_filmesbem_avaliados.csv")
+
+df_filmes['Gross']=pd.to_numeric(df_filmes['Gross'],errors='coerce')
+df_filmes['IMDB_Rating']=pd.to_numeric(df_filmes['IMDB_Rating'], errors='coerce')
+
+#calculando a media de IMDB e Gross para cada Releasing_Year
+metricas_por_ano = df_filmes.groupby('Released_Year').agg(
+    Media_Rating=('IMDB_Rating','mean'),
+    Media_Receita=('Gross','mean'),
+    Total_filmes=('Series_Title','count'),
+)
+print(metricas_por_ano)
+"""
+#ordenando os filmes
+df_ordenado_por_nota=df_filmes.sort_values(by='IMDB_Rating',ascending=False)
+print("\n top 5 filmes por nota (IMDB_Ratting)")
+print(df_ordenado_por_nota)
+
+
+#ordenando filmes por mais de uma coluna
+df_ordenado_por_duas_colunas=df_filmes.sort_values(by=['Released_Year','Gross'],ascending=[False,True])
+print("\n top 5 filmes por ano e gross:")
+print(df_ordenado_por_duas_colunas.head())
+
+
+#Contando as frequencias de coluna
+contagem_diretores = df_filmes['Director'].value_counts()
+print(contagem_diretores.head(10))
+
 titulos_filmes = df_filmes['Series_Title']
 print("primeiro 5 filmes")
 print(titulos_filmes.head)
@@ -44,7 +76,7 @@ filme_acao = df_filmes[df_filmes["Genre"].str.contains("Action",na=False)]
 print("\n foç,es qie cpmte, p gemerp 'Ation'")
 print(filme_acao[['Series_Title','Genre']].head())
 
-"""
+
 print("dados caregado")
    
 
