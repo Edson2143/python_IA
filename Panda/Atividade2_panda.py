@@ -23,6 +23,7 @@ df_filmes = pd.read_csv(url_filmes)
 #selecionando linhas e e colunas especificar
 
 
+
 selecao_especifica = df_filmes.iloc[[0,3],[1,2,9,3]]
 print("primeiroas 5 linhas do datFrame filmes head: ")
 print(selecao_especifica)
@@ -124,6 +125,8 @@ print(df_filmes_idx.head())
 Poderoso = df_filmes_idx.loc["The Godfather"]
 print('\nDados do filme : the godfather')
 print(Poderoso)
+
+
 #Filtrar  os dados baseados em condicoes (Boolean indexing0)
 df_filmes_bem_avaliados = df_filmes[df_filmes["IMDB_Rating"]<=8.5]
 print("\nFilmes com nota >+ 8.5 (Primeira linha):")

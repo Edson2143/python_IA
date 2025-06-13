@@ -18,10 +18,26 @@ print (f"\nDataframe com protudo")
 print(fruta_selecionados.head())
 
 #9.Exiba os dados do produto com ID_Produto igual a 110 (Limão Tahiti) 
-#selecionando linhas e e colunas especificar
-selecao_especifica = df_filmes.iloc[[0,3],[1,4]]
-print("\n Printando uma seleçao especifica, linha 0 e 3 e coluna 0 e 4")
+selecao_especifica = df_filmes.iloc[[110]]#,[1,4]]
+print("\n Printando uma seleçao especifica, ID_produto 110")
 print(selecao_especifica)
+
+#10. Quais são os produtos da categoria 'Verdura'?
+verdura = df_filmes[df_filmes["Categoria"].str.contains("Verdura",na=False)]
+print("\n categoria legumes'")
+print(verdura[['Categoria']])
+
+#11. Quais frutas têm um Preco_Kg superior a R$ 10,00?
+preco_superior = df_filmes[df_filmes["Preco_Kg"]>=10.00]
+print("\nProduto com preço >= 10.00:")
+print(preco_superior['Preco_Kg'])
+
+#12. Quais produtos foram repostos no dia '2024-06-01'?
+data_reposto = df_filmes[df_filmes["Data_Ultima_Reposicao"]=='2024-06-01']
+print("\nProduto com data reposiçao = 2024-06-01: ")
+print(preco_superior['Data_Ultima_Reposicao'])
+
+
 
 """
 print("\n informaçoes sobre o dataframe info")
