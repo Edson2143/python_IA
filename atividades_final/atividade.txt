@@ -1,0 +1,10 @@
+nstruções
+Em anexo segue o dataFrame e as perguntas da atividade
+Para cada seção das perguntas, faça o commit e envie ao github: 
+1.Inspeção Básica do DataFrame - ao fim desse commit e push
+2.Seleção e Filtragem de Dados - ao fim desse commit e push
+3.Ordenação de Dados - ao fim desse commit e push
+4.Criação e Modificação de Colunas - ao fim desse commit e push
+5.Tratamento de Dados Ausentes (NaN) - ao fim desse commit e push
+6.Agregação e Agrupamento de Dados - ao fim desse commit e pushh
+7.Plot de gráfico - ao fim desse commit e push
