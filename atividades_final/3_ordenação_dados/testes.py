@@ -3,15 +3,23 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-#Seleção e Filtragem de Dados:
-#1. Selecione e exiba apenas a coluna 'Produto'.
 url_filmes = "produtos_mercado.csv"
 df_filmes = pd.read_csv(url_filmes)
-#7. Selecione e exiba apenas a coluna 'Produto'
-fruta_selecionados = df_filmes[['Produto']]
-print (f"\nDataframe com protudo")
-print(fruta_selecionados.head())
 
+import pandas as pd
+
+# Criando um DataFrame de exemplo
+dados = {
+    'Produto': ['A', 'B', 'C', 'D', 'E', 'F'],
+    'Valor': [100, 200, 50, 300, 150, 250]
+}
+df = pd.DataFrame(dados)
+
+# Selecionando os 5 itens com os maiores valores na coluna 'Valor'
+top_5 = df.nlargest(5, 'Valor')
+print(top_5)
+
+"""
 #8. Selecione e exiba as colunas 'Produto', 'Categoria' e 'Preco_Kg'
 fruta_selecionados = df_filmes[['Produto','Categoria','Preco_Kg']]
 print (f"\nDataframe com protudo")
@@ -48,3 +56,40 @@ data_frutas = (df_filmes['Categoria'] == 'Fruta') #& (df_filmes['Estoque_Kg'] >=
 produtos_selecionados = df_filmes[data_frutas]
 print("\nFrutas >= 150 kg")
 print(produtos_selecionados)
+# Filtrar os produtos da Fazenda Sol Nascente e da categoria Fruta
+#filtros = (dados['fornecedor'] == 'Fazenda Sol Nascente') & (dados['categoria'] == 'Fruta')
+#produtos_filtrados = dados[filtros]
+
+#print(produtos_filtrados)
+
+
+
+
+print("\n informaçoes sobre o dataframe info")
+print(df_filmes.info())
+#2 Quais são os nomes de todas as colunas?
+print(f"\n O dataframe de frutas tem {df_filmes.shape[0]} e colunas {df_filmes.shape[1]}")
+
+
+#3. Quais são os tipos de dados de cada coluna? A coluna Data_Ultima_Reposicao está no formato
+#correto de data?
+#index
+#tra informaçoes dos indices das linhas
+print("\ninformaçoes dos dados: ")
+print(df_filmes.dtypes)
+
+#4. Exiba as 7 primeiras linhas do DataFrame.
+print("\nprimeiroas 7 linhas do datFrame filmes head: ")
+print(df_filmes.head(7))
+
+#5. Exiba as 3 últimas linhas do DataFrame.
+df = pd.DataFrame(df_filmes)
+ultimas_linhas = df.tail(3)
+print(f"\n mostrando as 3 ultimas : {ultimas_linhas}")
+
+#6. Obtenha um resumo estatístico das colunas numéricas (como preço e estoque)
+df = pd.DataFrame(df_filmes)
+preco_estoque = df[['Preco_Kg', 'Estoque_Kg']].describe()
+print(f"\nresumo estatistico = {preco_estoque}")
+"""
+
