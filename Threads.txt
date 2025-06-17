@@ -1,0 +1,20 @@
+arquitetura Von Neumann:
+John Von Neumann Fisico-matematico  engenheiro químico húngaro.
+arquitetura Harvard:
+Desenvolvida por cientistas da Universidade de Harvard na década de 1940
+
+Conceituais:
+Arquitetura Von Neumann X Harvard
+São modelos fundamentais de projeto computadores
+Neumann usa mesma memória para ambos(mesma pista)
+Harvard separa a memória para dados e instruções
+	Exemplo dados(caminhões) em uma pista e instruções(comandos em outra) 
+vantagens e desvantagem de Neumann:
+	simplicidade menor custo
+	compartilham mesmo espaço(uma única via)
+vantagens e desvantagem de Harvard:
+	Vantagem maior desempenho  e eficiência onde processamento e (paralelo, quase simultâneo)
+	desvantagem Maior complexidade, maior custo de implementação
+Gargalo Von Neumannn:
+	Limitação na taxa de transferência, entre CPU e memória, causado por uma 'pista única' onde os dados trafegam 	simultaneamente em uma única via.
+	onde impede a CPU(unidade central de processamento) utilize sua velocidade máxima
