@@ -1,0 +1,33 @@
+Comparação CPU vs. GPU:
+
+1. Liste três diferenças arquitetônicas fundamentais entre uma CPU e uma GPU.  
+R. CPU
+1. Unidade central de processamento,  tem menos núcleos mais potente para 
+   processamento
+2. Possui unidade controle avançada caches maiores
+3. é determinante para velocidade de execução dos programas, navegar web, e
+   cálculos de física. 
+R. GPU(unidade de processamento de gráficos).
+. Esses núcleos oferecem desempenho sólido.
+. e destaca-se em tarefas altamente paralelas, como renderização(finalização  de imagem digital ou modelo 3D.
+. com o tempo tornou-se mais programáveis   e flexíveis
+  
+
+2. Explique por que uma CPU é geralmente mais adequada para executar o sistema operacional, enquanto uma GPU é mais adequada para renderização de jogos.
+R. CPU: Tendo bilhões de transistores, a CPU pode ter vários núcleos de processamento, por isso é essencial para todos os sistema modernos.
+GPU as são capazes de executar muitas tarefas sumultaneamente, para lidar com uma crescente variedade de aplicativos incluído IA(inteligência artificial).
+
+3. O que significa o termo "computação heterogênea" no contexto de CPUs e GPUs?
+R. Consegue combinar  em um unic ambiente para otimizar a execução de tarefas,
+a CPU controla processos gerais
+GPU acelera os calculos  com a utiliza TPU otimiza tarefas de IA.
+
+Debate e Justificativa:
+1. "Para treinar um modelo de rede neural profunda com milhões de parâmetros, uma CPU de última geração com muitos núcleos é tão eficaz quanto uma GPU moderna." Você concorda ou discorda desta afirmação? Justifique sua resposta com base nas características arquitetônicas de CPUs e GPUs.
+R. não concordo,  oque mais se aproxima da de uma excuçao eficaz e a GPU, pois se destaca no tipo de processamento paralelo e nos claculos de ponto flutuante para treinar modelos de aprendizado.
+desenvolvidas para renderizar gráficos, "conhecidas com placa de vídeo), porem esses poderosos processadores são capazes de um alto poder computacional com recursos avançados de processamento tornam as GPUs altamente desejadas, para robótica principalmente
+
+2.Descreva um tipo de tarefa computacional que seria extremamente ineficiente se executada em uma GPU, mas eficiente em uma CPU. Explique o porquê.
+R. CPUs são voltadas  para tarefas gerais, as Unidade central de processamento processam todos os tipos de cálculos exigidos por aplicações do dia a dia.
+
+

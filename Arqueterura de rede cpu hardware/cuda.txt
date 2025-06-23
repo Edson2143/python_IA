@@ -1,0 +1,3 @@
+Conceitual CUDA:
+1.Descreva a hierarquia de execução em CUDA: threads, blocos e grades. Explique como threadIdx, blockIdx, blockDim e gridDim são usados para identificar e gerenciar threads.  
+R.
