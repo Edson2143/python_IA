@@ -1,3 +1,35 @@
 Conceitual CUDA:
 1.Descreva a hierarquia de execução em CUDA: threads, blocos e grades. Explique como threadIdx, blockIdx, blockDim e gridDim são usados para identificar e gerenciar threads.  
-R.
+
+R. hierarquia em CUDA é, a organização de threads em grades e blocos, onde a função kernel é executado paralelamente.
+threadIdx: Representa o índice do thread dentro de um bloco. Permitindo o acesso a threads em estruturas de dados 1D, 2D ou 3D.
+blockIdx: Representa o índice do bloco dentro da grade
+blockDim: Representa o tamanho do bloco
+gridDim: Representa o tamanho da grade
+
+2. Qual é o papel de um Streaming Multiprocessor (SM) na arquitetura de uma GPU NVIDIA em relação à execução de kernels CUDA?
+R. na SM e responsável por executar vários blocos e as instrução em paralelo, Os núcleos CUDA da Nvidia são unidades de processamento especializadas dentro das placas de vídeo Nvidia
+
+3.O que é um "kernel launch"? Quais são os parâmetros mínimos que precisam ser especificados?
+R.trata-se do momento que um código começa a ser executado em  um processamento
+root:
+ro:
+quiet:
+splash:
+init=:
+
+Uso de Memória:
+1.Explique a diferença entre memória global e memória compartilhada em uma GPU CUDA em termos de escopo de acesso, velocidade e caso de uso principal
+R. memoria global e uma memoria mais lenta e acessível a todas as threades,
+   quanto a memoria compartilhada e muito mais rápida gerando ganhos significativos.
+
+2. Por que o uso excessivo de memória local (devido a "register spilling") pode degradar o desempenho de um kernel CUDA?
+R. devido ao derramamento de registro causa a degradação e compromete o  desempenho da função CUDA.
+
+3. Descreva um padrão de algoritmo (ex: redução, convolução, multiplicação de matrizes) onde o uso de memória compartilhada é crucial para obter bom desempenho. Explique como a memória compartilhada seria utilizada nesse caso.
+R. o uso de memória compartilhada é crucial para obter bom desempenho em cenários onde a comunicação eficiente entre processos é necessária.
+Ao permitir que vários processos acessem a mesma área de memória.
+
+
+
+ 
